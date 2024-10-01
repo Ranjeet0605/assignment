@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Shape Mask with Frame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Select Image and Shape</h1>
+        <input type="file" class="input-image" id="imageInput" accept="image/*">
+    </div>
+
+    <div class="card" id="card">
+        <div class="image-wrapper">
+            <img id="uploadedImage" class="uploaded-image" src="" alt="Uploaded Image">
+            <img id="frameImage" class="frame-image" src="your_frame_image.png" alt="Frame Image"> <!-- Your frame image -->
+        </div>
+
+        <div class="shape-selector" id="shapeSelector">
+            <img src="user_image_frame_1.png" alt="Heart" onclick="setShape('heart')" id="heartBtn">
+            <img src="user_image_frame_2.png" alt="Square" onclick="setShape('square')" id="squareBtn">
+            <img src="user_image_frame_3.png" alt="Circle" onclick="setShape('circle')" id="circleBtn">
+            <img src="user_image_frame_4.png" alt="Rectangle" onclick="setShape('rectangle')" id="rectangleBtn">
+            <img src="home.png" alt="Original" onclick="setShape('original')" id="originalBtn">
+        </div>
+
+        <div class="apply-skip-buttons">
+            <button class="apply-shape-button" onclick="applyShape()">Apply Shape</button>
+            <button class="skip-button" onclick="skipImage()">Skip</button>
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
